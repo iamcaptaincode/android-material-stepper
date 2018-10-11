@@ -17,7 +17,7 @@ limitations under the License.
 package com.stepstone.stepper.sample
 
 import android.os.Bundle
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 import android.view.View
 
 class CustomPageTransformerActivity : AbstractStepperActivity() {
@@ -30,7 +30,7 @@ class CustomPageTransformerActivity : AbstractStepperActivity() {
         stepperLayout.setPageTransformer(CrossFadePageTransformer())
     }
 
-    private class CrossFadePageTransformer : ViewPager.PageTransformer {
+    private class CrossFadePageTransformer : androidx.viewpager.widget.ViewPager.PageTransformer {
 
         override fun transformPage(view: View, position: Float) {
             if (position <= -1.0f || position >= 1.0f) {

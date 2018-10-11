@@ -1,7 +1,7 @@
 package com.stepstone.stepper
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 /**
  * A dummy fragment with no view.
  */
-open class DummyStepFragment : Fragment(), Step {
+open class DummyStepFragment : androidx.fragment.app.Fragment(), Step {
 
     override fun verifyStep(): VerificationError? {
         return null

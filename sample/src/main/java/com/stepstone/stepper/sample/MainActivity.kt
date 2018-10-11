@@ -18,10 +18,10 @@ package com.stepstone.stepper.sample
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +34,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     @BindView(R.id.list)
-    lateinit var recyclerView: RecyclerView
+    lateinit var recyclerView: androidx.recyclerview.widget.RecyclerView
 
     @BindView(R.id.toolbar)
     lateinit var toolbar: Toolbar
@@ -46,11 +46,11 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         recyclerView.adapter = SampleItemAdapter()
     }
 
-    internal inner class SampleItemAdapter internal constructor() : RecyclerView.Adapter<SampleItemViewHolder>() {
+    internal inner class SampleItemAdapter internal constructor() : androidx.recyclerview.widget.RecyclerView.Adapter<SampleItemViewHolder>() {
 
         internal val items: List<SampleItem> = Arrays.asList(
                 SampleItem(getString(R.string.default_dots), getString(R.string.default_dots_description), DefaultDotsActivity::class.java),
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    internal class SampleItemViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    internal class SampleItemViewHolder internal constructor(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
         @BindView(R.id.item_sample_title)
         lateinit var title: TextView

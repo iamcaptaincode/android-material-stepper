@@ -1,8 +1,8 @@
 package com.stepstone.stepper.sample.adapter
 
 import android.content.Context
-import android.support.annotation.IntRange
-import android.support.v4.app.FragmentManager
+import androidx.annotation.IntRange
+import androidx.fragment.app.FragmentManager
 
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.adapter.AbstractFragmentStepAdapter
@@ -10,7 +10,7 @@ import com.stepstone.stepper.sample.R
 import com.stepstone.stepper.sample.step.fragment.StepFragmentSample
 import com.stepstone.stepper.viewmodel.StepViewModel
 
-class SampleFragmentStepAdapter(fm: FragmentManager, context: Context) : AbstractFragmentStepAdapter(fm, context) {
+class SampleFragmentStepAdapter(fm: androidx.fragment.app.FragmentManager, context: Context) : AbstractFragmentStepAdapter(fm, context) {
 
     override fun getViewModel(@IntRange(from = 0) position: Int): StepViewModel {
         val builder = StepViewModel.Builder(context)

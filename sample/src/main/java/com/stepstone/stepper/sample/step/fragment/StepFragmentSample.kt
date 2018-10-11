@@ -18,7 +18,7 @@ package com.stepstone.stepper.sample.step.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.support.annotation.LayoutRes
+import androidx.annotation.LayoutRes
 import android.text.Html
 import android.view.View
 import android.view.animation.AnimationUtils

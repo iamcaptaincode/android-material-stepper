@@ -1,8 +1,8 @@
 package com.stepstone.stepper.test.test_double
 
 import android.content.Context
-import android.support.annotation.IntRange
-import android.support.v4.app.FragmentManager
+import androidx.annotation.IntRange
+import androidx.fragment.app.FragmentManager
 import android.util.SparseArray
 import com.nhaarman.mockito_kotlin.spy
 import com.stepstone.stepper.DummyStepFragment
@@ -13,7 +13,7 @@ import com.stepstone.stepper.viewmodel.StepViewModel
 /**
  * Creates Spy [DummyStepFragment]s which can be later verified.
  */
-class SpyStepAdapter(fm: FragmentManager, context: Context, val viewModels: List<StepViewModel>) : AbstractFragmentStepAdapter(fm, context) {
+class SpyStepAdapter(fm: androidx.fragment.app.FragmentManager, context: Context, val viewModels: List<StepViewModel>) : AbstractFragmentStepAdapter(fm, context) {
 
     val steps = SparseArray<Step>()
 

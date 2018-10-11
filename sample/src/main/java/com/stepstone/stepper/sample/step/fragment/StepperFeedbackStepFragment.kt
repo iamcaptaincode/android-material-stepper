@@ -18,7 +18,7 @@ package com.stepstone.stepper.sample.step.fragment
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.annotation.UiThread
+import androidx.annotation.UiThread
 import android.view.View
 import android.widget.TextView
 
